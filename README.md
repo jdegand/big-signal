@@ -19,7 +19,7 @@ With Signal, you can now be more fine-grained in what the UI is rerendering. The
 - Possible explanation: `When you read a signal within an OnPush component's template, Angular tracks the signal as a dependency of that component. When the value of that signal changes, Angular automatically marks the component to ensure it gets updated the next time change detection runs.`
 - `In case an input receives a mutable object as value and you modify the object but preserve the reference, Angular will not invoke change detection. That’s the expected behavior because the previous and the current value of the input point to the same reference.`
 - `Signal Components, envisioned for future Angular versions, will provide a more fine-grained behavior: Only changed parts of components will be checked. These parts will be embedded views defined by structural directives like ngFor or ngIf.`
-- Can't maintain type safety in templates with signal objects.
+- Type narrowing has been a problem with signal objects.
 
 ## Useful Resources
 
